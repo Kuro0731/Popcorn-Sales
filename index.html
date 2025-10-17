@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Cub Scout Popcorn Sales!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Welcome Section */
+        #welcome {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #welcome::before {
+            content: "🍿";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .welcome-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Daughter's Section - Girly Theme */
+        #daughter {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffeaa7 100%);
+            position: relative;
+        }
+
+        #daughter::before {
+            content: "✨";
+            position: absolute;
+            font-size: 80px;
+            top: 10%;
+            left: 10%;
+            opacity: 0.3;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        #daughter::after {
+            content: "💖";
+            position: absolute;
+            font-size: 80px;
+            bottom: 10%;
+            right: 10%;
+            opacity: 0.3;
+            animation: sparkle 3s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+        }
+
+        .daughter-content {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(255, 105, 180, 0.3);
+            max-width: 700px;
+            border: 5px solid #ff69b4;
+        }
+
+        .daughter-content h2 {
+            color: #ff1493;
+        }
+
+        /* Son's Section - Sonic Theme */
+        #son {
+            background: linear-gradient(135deg, #0066ff 0%, #00ccff 50%, #ffd700 100%);
+            position: relative;
+        }
+
+        #son::before {
+            content: "⚡";
+            position: absolute;
+            font-size: 80px;
+            top: 15%;
+            right: 15%;
+            opacity: 0.3;
+            animation: zoom 2s ease-in-out infinite;
+        }
+
+        #son::after {
+            content: "💨";
+            position: absolute;
+            font-size: 80px;
+            bottom: 15%;
+            left: 15%;
+            opacity: 0.3;
+            animation: zoom 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes zoom {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.3) rotate(15deg); }
+        }
+
+        .son-content {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0, 102, 255, 0.3);
+            max-width: 700px;
+            border: 5px solid #ff0000;
+        }
+
+        .son-content h2 {
+            color: #0066ff;
+            text-shadow: 2px 2px #ff0000;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #003366 0%, #005599 100%);
+            color: white;
+        }
+
+        .contact-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            max-width: 700px;
+        }
+
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 80px;
+            border: 5px solid white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .btn-pink {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            color: white;
+        }
+
+        .btn-blue {
+            background: linear-gradient(135deg, #0066ff 0%, #ff0000 100%);
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #003366;
+        }
+
+        .nav-arrows {
+            margin-top: 30px;
+        }
+
+        .nav-arrows a {
+            font-size: 2em;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.8em; }
+            p { font-size: 1em; }
+            .btn { font-size: 1.1em; padding: 12px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Section -->
+    <section id="welcome" class="section">
+        <div class="welcome-content">
+            <h1>🍿 Support Our Cub Scout Popcorn Sale! 🍿</h1>
+            <p>Help us reach our fundraising goal! Our Cub Scout troop is selling delicious popcorn to support our activities, camping trips, and community service projects.</p>
+            <p>Click below to meet our scouts and order from their individual stores!</p>
+            <div class="nav-arrows">
+                <a href="#daughter">⬇️ Meet Eren</a>
+                <a href="#son">⬇️ Meet Joey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daughter's Section -->
+    <section id="daughter" class="section">
+        <div class="daughter-content">
+            <h2>✨ Eren ✨</h2>
+            <img src="/images/Eren Pic.jpg" alt="Eren" style="width: 200px; height: 200px; border-radius: 50%; margin: 20px auto; display: block; border: 5px solid white;">
+            <p><strong>Grade:</strong> 4th Grade</p>
+            <p>Hi! I'm Eren and this is my first time selling popcorn for Cub Scouts! When I'm not selling popcorn, I enjoy fishing and doing puzzles with my Grandma Jan. Being a Cub Scout has taught me that even when things are hard, real friends will help you out and how to do what's right no matter what. Every bag you buy helps me and my troop go on amazing adventures and help our community!</p>
+            <p>🎀 My favorite popcorn flavors are sea salt caramel and the cheesy one! 🎀</p>
+            <a href="https://www.prpopcornstore.com/?sid=YGL048" class="btn btn-pink" target="_blank">
+                🛒 Shop My Store! 🛒
+            </a>
+            <div class="nav-arrows">
+                <a href="#welcome">⬆️ Back to Top</a>
+                <a href="#son">⬇️ Visit Joey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Son's Section -->
+    <section id="son" class="section">
+        <div class="son-content">
+            <h2>⚡ Joey ⚡</h2>
+            <img src="/images/Joey Pic.jpg" alt="Joey" style="width: 200px; height: 200px; border-radius: 50%; margin: 20px auto; display: block; border: 5px solid white;">
+            <p><strong>Grade:</strong> 3rd Grade</p>
+            <p>Hey! I'm Joey and this is my first time selling popcorn for Cub Scouts! I love Sonic the Hedgehog, fishing, and chili cheese dogs (just like Sonic)! I recently won Citizen of the Month because of all the awesome lessons I've learned in Cub Scouts, and I'm making so many new friends and buddies! Every purchase helps us go camping, learn new skills, and do cool projects. Gotta go fast... to buy some popcorn!</p>
+            <p>⚡ My favorite popcorn flavors are sea salt caramel and the cheesy one! ⚡</p>
+            <a href="https://www.prpopcornstore.com/?sid=YGL048" class="btn btn-blue" target="_blank">
+                🛒 Shop My Store! 🛒
+            </a>
+            <div class="nav-arrows">
+                <a href="#daughter">⬆️ Visit Eren</a>
+                <a href="#signup">⬇️ Join Our List!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup Section -->
+    <section id="signup" class="section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); min-height: 80vh;">
+        <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 600px;">
+            <h2 style="color: #f5576c; margin-bottom: 20px;">🎉 Join Our Popcorn Family! 🎉</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">Want to be the first to know about next year's popcorn sale? Sign up and we'll keep you posted!</p>
+            
+            <form name="popcorn-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="popcorn-signup" />
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your Name" 
+                    required 
+                    style="padding: 15px; font-size: 1.1em; border: 2px solid #f5576c; border-radius: 10px; font-family: inherit;"
+                />
+                
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Your Email" 
+                    required 
+                    style="padding: 15px; font-size: 1.1em; border: 2px solid #f5576c; border-radius: 10px; font-family: inherit;"
+                />
+                
+                <button 
+                    type="submit" 
+                    class="btn btn-pink" 
+                    style="margin: 10px 0; cursor: pointer; border: none; font-family: inherit;"
+                >
+                    🍿 Keep Me Posted! 🍿
+                </button>
+            </form>
+            
+            <p style="font-size: 0.9em; color: #666; margin-top: 20px;">We'll only contact you about popcorn sales. No spam, we promise! 🤞</p>
+            
+            <div class="nav-arrows" style="margin-top: 20px;">
+                <a href="#son" style="color: #f5576c;">⬆️ Visit Joey</a>
+                <a href="#contact" style="color: #f5576c;">⬇️ Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="contact-content">
+            <h2>📧 Contact Us 📧</h2>
+            <p>Have questions about delivery or pickup? Want to order offline? Reach out to us!</p>
+            <p><strong>Email:</strong> cotylwood@gmail.com</p>
+            <p><strong>Phone:</strong> (501) 575-8167</p>
+            <p>Thank you for supporting our Cub Scout troop! Every purchase makes a difference! 🎉</p>
+            <a href="#welcome" class="btn btn-gold">⬆️ Back to Top</a>
+        </div>
+    </section>
+</body>
+</html>
