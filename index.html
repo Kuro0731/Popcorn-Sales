@@ -334,30 +334,19 @@
                     <img src="/images/page-3.jpg" alt="Brochure Page 3" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
             </div>
-
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white;">
-                <h3 style="color: white; margin-bottom: 20px; font-size: 1.8em;">💰 Payment Information 💰</h3>
-                <p style="font-size: 1.1em; margin-bottom: 20px;">After placing your order, send the total amount shown to any of these payment options:</p>
-                <div style="font-size: 1.2em; line-height: 2; font-weight: bold;">
-                    <p>💵 <strong>CashApp:</strong> $DGKuro <br><span style="font-size: 0.9em; font-weight: normal;">(or search by phone: (501) 575-8167)</span></p>
-                    <p>💳 <strong>Venmo:</strong> @popcorn-sales</p>
-                    <p>🏦 <strong>Chime:</strong> $Coty-Wood</p>
-                    <p>🍎 <strong>Apple Pay:</strong> (501) 575-8167</p>
-                    <p>✉️ <strong>Check:</strong> Mail to Coty Wood <br><span style="font-size: 0.9em; font-weight: normal;">Address: Will be provided in follow up contact!!</span></p>
-                </div>
-                <p style="font-size: 0.95em; margin-top: 20px; font-style: italic;">Select your items below, and the total will calculate automatically! Then send payment and we'll ship your delicious popcorn! 🍿</p>
-            </div>
-
-            <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
+ <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
             <p style="margin-bottom: 20px; color: #666;">Check the items you want to order. The total will calculate automatically!</p>
             
             <form name="brochure-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Hidden fields for Netlify -->
                 <input type="hidden" name="form-name" value="brochure-order" />
                 <input type="hidden" name="order-total" id="hidden-total" />
                 <input type="hidden" name="order-details" id="hidden-order-details" />
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
+                
+                <!-- Product Selection -->
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: left;">
                     <h4 style="color: #667eea; margin-bottom: 15px;">🍿 Select Your Popcorn</h4>
                     
@@ -494,8 +483,7 @@
                             <span style="color: #667eea; font-weight: bold;">$50</span>
                         </label>
                     </div>
-                    
-                    <!-- Order Total Display -->
+
                     <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; text-align: center;">
                         <p style="font-size: 1.1em; margin-bottom: 5px;">Order Total:</p>
                         <p style="font-size: 2em; font-weight: bold; margin: 0;" id="order-total">$0.00</p>
@@ -539,6 +527,7 @@
                 <label style="font-size: 1em; font-weight: bold; color: #667eea; text-align: left;">How will you pay? *</label>
                 <select 
                     name="payment-method" 
+                    id="payment-method"
                     required 
                     style="padding: 15px; font-size: 1em; border: 2px solid #667eea; border-radius: 10px; font-family: inherit; cursor: pointer;"
                 >
@@ -550,6 +539,25 @@
                     <option value="Check">Check</option>
                     <option value="Other">Other (explain in notes)</option>
                 </select>
+
+                <div id="payment-info" style="display: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; margin-top: 20px; color: white; animation: slideIn 0.3s ease-out;">
+                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.5em;">💰 Send Payment Here 💰</h4>
+                    <div id="payment-details" style="font-size: 1.1em; line-height: 1.8; font-weight: bold;"></div>
+                    <p style="font-size: 0.9em; margin-top: 15px; font-style: italic; opacity: 0.9;">After submitting this form, send the total amount shown above to this payment method. We'll ship your popcorn once payment is received! 🍿</p>
+                </div>
+                
+                <style>
+                    @keyframes slideIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                </style>
                 
                 <textarea 
                     name="notes" 
@@ -567,7 +575,7 @@
                 </button>
             </form>
             
-            <p style="font-size: 0.9em; color: #666; margin-top: 20px;">We'll contact you within 24 hours to confirm your order! Send the calculated total to your chosen payment method. 💰</p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 20px;">💡 <strong>Tip:</strong> After you submit this form, send payment using the method and details shown above. We'll contact you within 24 hours to confirm! 💰</p>
             
             <div class="nav-arrows" style="margin-top: 20px;">
                 <a href="#son" style="color: #667eea;">⬆️ Joey's Section</a>
@@ -653,13 +661,41 @@
                     }
                 });
                 
-                totalDisplay.textContent = '$' + total.toFixed(2);
-                hiddenTotal.value = '$' + total.toFixed(2);
+                totalDisplay.textContent = '
+</body>
+</html> + total.toFixed(2);
+                hiddenTotal.value = '
+</body>
+</html> + total.toFixed(2);
                 hiddenOrderDetails.value = selectedItems.length > 0 ? selectedItems.join(', ') : 'No items selected';
             }
             
             checkboxes.forEach(function(checkbox) {
                 checkbox.addEventListener('change', updateTotal);
+            });
+            
+            const paymentMethodSelect = document.getElementById('payment-method');
+            const paymentInfoDiv = document.getElementById('payment-info');
+            const paymentDetailsDiv = document.getElementById('payment-details');
+            
+            const paymentInfo = {
+                'CashApp': '💵 <strong>CashApp:</strong> $DGKuro<br><span style="font-size: 0.9em; font-weight: normal;">(or search by phone: (501) 575-8167)</span>',
+                'Venmo': '💳 <strong>Venmo:</strong> @popcorn-sales',
+                'Chime': '🏦 <strong>Chime:</strong> $Coty-Wood',
+                'Apple Pay': '🍎 <strong>Apple Pay:</strong> (501) 575-8167',
+                'Check': '✉️ <strong>Check:</strong> Mail to Coty Wood<br><span style="font-size: 0.9em; font-weight: normal;">Address will be provided in follow-up contact!</span>',
+                'Other': '📝 <strong>Other:</strong> Please include payment details in the notes section below.'
+            };
+            
+            paymentMethodSelect.addEventListener('change', function() {
+                const selectedMethod = this.value;
+                
+                if (selectedMethod && paymentInfo[selectedMethod]) {
+                    paymentDetailsDiv.innerHTML = paymentInfo[selectedMethod];
+                    paymentInfoDiv.style.display = 'block';
+                } else {
+                    paymentInfoDiv.style.display = 'none';
+                }
             });
         });
     </script>
