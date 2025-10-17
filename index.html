@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Cub Scout Popcorn Sales!</title>
     <link rel="icon" href="/images/favicon image.png" type="image/x-icon">
-     <meta name="description" content="Support Joey and Eren's Cub Scout popcorn fundraiser! Shop online or browse our brochure for delicious popcorn options.">
-     <meta property="og:type" content="website">
+    <meta name="keywords" content="Cub Scouts, Popcorn Sales, Fundraiser, Scout Troop, Camping, Community Service, Popcorn Fundraiser">
+    <meta name="description" content="Support Joey and Eren's Cub Scout popcorn fundraiser! Shop online or browse our brochure for delicious popcorn options.">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Support Our Cub Scout Popcorn Sales!">
     <meta property="og:description" content="Help Joey and Eren reach their fundraising goal! Delicious popcorn with multiple payment options.">
     <meta property="og:image" content="https://scoutspopcornsales.netlify.app/images/preview-image.jpg">
@@ -14,6 +15,7 @@
     <meta name="twitter:title" content="Support Our Cub Scout Popcorn Sales!">
     <meta name="twitter:description" content="Help Joey and Eren reach their fundraising goal! Delicious popcorn with multiple payment options.">
     <meta name="twitter:image" content="https://scoutspopcornsales.netlify.app/images/preview-image.jpg">
+    
     <style>
         * {
             margin: 0;
@@ -223,6 +225,11 @@
             color: #003366;
         }
 
+        button[type="submit"]:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
         .nav-arrows {
             margin-top: 30px;
         }
@@ -242,7 +249,7 @@
     </style>
 </head>
 <body>
-   
+
     <section id="welcome" class="section">
         <div class="welcome-content">
             <h1>🍿 Support Our Cub Scout Popcorn Sale! 🍿</h1>
@@ -250,7 +257,7 @@
             <p><strong>Order online from our store OR browse our full brochure for even more options!</strong></p>
             <p>Click below to meet our scouts and choose how you'd like to order!</p>
             <div class="nav-arrows">
-                 <a href="#daughter">⬇️ Eren's Section</a>
+                <a href="#daughter">⬇️ Eren's Section</a>
                 <span style="margin: 0 10px;">•</span>
                 <a href="#son">⬇️ Joey's Section</a>
                 <span style="margin: 0 10px;">•</span>
@@ -259,7 +266,6 @@
         </div>
     </section>
 
-    
     <section id="daughter" class="section">
         <div class="daughter-content">
             <h2>✨ Eren ✨</h2>
@@ -278,7 +284,6 @@
         </div>
     </section>
 
-  
     <section id="son" class="section">
         <div class="son-content">
             <h2>⚡ Joey ⚡</h2>
@@ -292,34 +297,31 @@
             </a>
             <div class="nav-arrows">
                 <a href="#daughter">⬆️ Eren's Section</a>
-                <a href="#signup">⬇️ Join Our List!</a>
+                <a href="#brochure">⬇️ Order from Brochure</a>
             </div>
         </div>
     </section>
 
-     <section id="brochure" class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+    <section id="brochure" class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 800px;">
             <h2 style="color: #667eea; margin-bottom: 20px;">📋 Order from Our Brochure 📋</h2>
             <p style="font-size: 1.2em; margin-bottom: 20px;">Don't see what you want in our online store? Our brochure has even more delicious options!</p>
-            <p style="font-size: 1.1em; margin-bottom: 30px; font-weight: bold;">Browse the brochure below, then fill out the form to place your order!</p>
+            <p style="font-size: 1.1em; margin-bottom: 30px; font-weight: bold;">Browse the brochure below, then select your products to place your order!</p>
+
             <div style="margin: 30px 0; text-align: center;">
-                <h3 style="color: #764ba2; margin-bottom: 20px;">📸 Brochure Pages 📸</h3>
-                <p style="margin-bottom: 20px; color: #666;">Click images to view larger</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;">
-                    <a href="/images/page-1.jpg" target="_blank">
-                        <img src="/images/page-1.jpg" alt="Brochure Page 1" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    </a>
-                    <a href="/images/page-2.jpg" target="_blank">
-                        <img src="/images/page-2.jpg" alt="Brochure Page 2" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    </a>
-                    <a href="/images/page-3.jpg" target="_blank">
-                        <img src="/images/page-3.jpg" alt="Brochure Page 3" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    </a>
+                <h3 style="color: #764ba2; margin-bottom: 20px;">📸 Browse Our Brochure 📸</h3>
+                <p style="margin-bottom: 20px; color: #666;">Scroll through all pages below</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <img src="/images/page-1.jpg" alt="Brochure Page 1" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <img src="/images/page-2.jpg" alt="Brochure Page 2" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                    <img src="/images/page-3.jpg" alt="Brochure Page 3" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
             </div>
+
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white;">
                 <h3 style="color: white; margin-bottom: 20px; font-size: 1.8em;">💰 Payment Information 💰</h3>
-                <p style="font-size: 1.1em; margin-bottom: 20px;">Send payment to any of these options:</p>
+                <p style="font-size: 1.1em; margin-bottom: 20px;">After placing your order, send the total amount shown to any of these payment options:</p>
                 <div style="font-size: 1.2em; line-height: 2; font-weight: bold;">
                     <p>💵 <strong>CashApp:</strong> $DGKuro <br><span style="font-size: 0.9em; font-weight: normal;">(or search by phone: (501) 575-8167)</span></p>
                     <p>💳 <strong>Venmo:</strong> @popcorn-sales</p>
@@ -327,15 +329,164 @@
                     <p>🍎 <strong>Apple Pay:</strong> (501) 575-8167</p>
                     <p>✉️ <strong>Check:</strong> Mail to Coty Wood <br><span style="font-size: 0.9em; font-weight: normal;">Address: Will be provided in follow up contact!!</span></p>
                 </div>
-                <p style="font-size: 0.95em; margin-top: 20px; font-style: italic;">After placing your order below, send payment and we'll ship your delicious popcorn! 🍿</p>
+                <p style="font-size: 0.95em; margin-top: 20px; font-style: italic;">Select your items below, and the total will calculate automatically! Then send payment and we'll ship your delicious popcorn! 🍿</p>
             </div>
+
+            <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
+            <p style="margin-bottom: 20px; color: #666;">Check the items you want to order. The total will calculate automatically!</p>
             
-            <h3 style="color: #667eea; margin-bottom: 20px;">📝 Place Your Brochure Order</h3>
             <form name="brochure-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
                 <input type="hidden" name="form-name" value="brochure-order" />
+                <input type="hidden" name="order-total" id="hidden-total" />
+                <input type="hidden" name="order-details" id="hidden-order-details" />
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: left;">
+                    <h4 style="color: #667eea; margin-bottom: 15px;">🍿 Select Your Popcorn</h4>
+                    
+                    <div style="display: grid; gap: 10px;">
+                        <!-- Specialty Collections -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 10px; margin-bottom: 5px;">Specialty Collections</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="60" data-name="Chocolate Lovers - $60" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Chocolate Lovers</strong> (55 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$60</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="45" data-name="Cheese Lovers - $45" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Cheese Lovers</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$45</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="35" data-name="Classic Trio - $35" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Classic Trio</strong> (17.75 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$35</span>
+                        </label>
+                        
+                        <!-- Chocolate Covered Varieties -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Chocolate Covered Varieties</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="28" data-name="Milk Chocolaty Pretzels - $28" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Milk Chocolaty Pretzels</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$28</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="28" data-name="Peanut Butter Cup - $28" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Peanut Butter Cup</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$28</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="28" data-name="Sea Salt Splash - $28" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Sea Salt Splash</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$28</span>
+                        </label>
+                        
+                        <!-- Caramel Varieties -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Caramel Varieties</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="28" data-name="Caramel Sea Salt - $28" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Caramel Sea Salt</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$28</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="10" data-name="Classic Caramel Chips - $10" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Classic Caramel Chips</strong> (8 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$10</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="30" data-name="Maple Pecan - $30" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Maple Pecan</strong> (15 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$30</span>
+                        </label>
+                        
+                        <!-- Cheese Varieties -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Cheese Varieties</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="20" data-name="Cheddar Cheese - $20" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Cheddar Cheese</strong> (5.5 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$20</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="20" data-name="Jalapeño Cheese - $20" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Jalapeño Cheese</strong> (5.5 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$20</span>
+                        </label>
+                        
+                        <!-- Microwave Varieties -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Microwave Varieties</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="20" data-name="Kettle Corn Microwave (15 Pack) - $20" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Kettle Corn Microwave</strong> (15 pack, 37.5 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$20</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="20" data-name="Butter Microwave (15 Pack) - $20" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Butter Microwave</strong> (15 pack, 37.5 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$20</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="35" data-name="Double Butter Microwave (28 Pack) - $35" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Double Butter Microwave</strong> (28 pack, 70 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$35</span>
+                        </label>
+                        
+                        <!-- Sweet Varieties -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Sweet Varieties</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="15" data-name="Cinnamon Roll - $15" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Cinnamon Roll</strong> (8 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$15</span>
+                        </label>
+                        
+                        <!-- Snack Mixes -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Snack Mixes</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="23" data-name="Trail Mix - $23" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Trail Mix</strong> (14 oz)</span>
+                            <span style="color: #667eea; font-weight: bold;">$23</span>
+                        </label>
+                        
+                        <!-- Support Our Troops -->
+                        <p style="font-weight: bold; color: #764ba2; margin-top: 15px; margin-bottom: 5px;">Support Our Troops</p>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="25" data-name="Military Donation $25 - $25" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Military Donation</strong> ($25 option)</span>
+                            <span style="color: #667eea; font-weight: bold;">$25</span>
+                        </label>
+                        
+                        <label style="display: flex; align-items: center; gap: 10px; padding: 10px; background: white; border-radius: 5px; cursor: pointer;">
+                            <input type="checkbox" class="product-checkbox" data-price="50" data-name="Military Donation $50 - $50" style="width: 20px; height: 20px;">
+                            <span style="flex: 1;"><strong>Military Donation</strong> ($50 option)</span>
+                            <span style="color: #667eea; font-weight: bold;">$50</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Order Total Display -->
+                    <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; text-align: center;">
+                        <p style="font-size: 1.1em; margin-bottom: 5px;">Order Total:</p>
+                        <p style="font-size: 2em; font-weight: bold; margin: 0;" id="order-total">$0.00</p>
+                    </div>
+                </div>
+
+                <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">📋 Your Information</h4>
                 
                 <input 
                     type="text" 
@@ -362,14 +513,6 @@
                 />
                 
                 <textarea 
-                    name="order" 
-                    placeholder="What would you like to order? (Please include item names and quantities) *" 
-                    required 
-                    rows="4"
-                    style="padding: 15px; font-size: 1em; border: 2px solid #667eea; border-radius: 10px; font-family: inherit; resize: vertical;"
-                ></textarea>
-                
-                <textarea 
                     name="address" 
                     placeholder="Your Mailing Address (Street, City, State, ZIP) *" 
                     required 
@@ -387,29 +530,28 @@
                     <option value="CashApp">CashApp</option>
                     <option value="Chime">Chime</option>
                     <option value="Venmo">Venmo</option>
-                    <option value="ApplePay">Apple Pay</option>
+                    <option value="Apple Pay">Apple Pay</option>
                     <option value="Check">Check</option>
                     <option value="Other">Other (explain in notes)</option>
                 </select>
                 
                 <textarea 
                     name="notes" 
-                    placeholder="Additional Notes (Optional - special requests, payment details, etc.)" 
+                    placeholder="Additional Notes (Optional - special requests, payment confirmation, etc.)" 
                     rows="2"
                     style="padding: 15px; font-size: 1em; border: 2px solid #667eea; border-radius: 10px; font-family: inherit; resize: vertical;"
                 ></textarea>
                 
                 <button 
                     type="submit" 
-                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; font-size: 1.3em; font-weight: bold; border-radius: 50px; border: none; cursor: pointer; font-family: inherit; transition: transform 0.3s, box-shadow 0.3s;"
-                    onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+                    class="btn"
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; font-size: 1.3em; font-weight: bold; border-radius: 50px; border: none; cursor: pointer; font-family: inherit;"
                 >
                     📬 Submit Order 📬
                 </button>
             </form>
             
-            <p style="font-size: 0.9em; color: #666; margin-top: 20px;">We'll contact you within 24 hours to confirm your order and payment! 💰</p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 20px;">We'll contact you within 24 hours to confirm your order! Send the calculated total to your chosen payment method. 💰</p>
             
             <div class="nav-arrows" style="margin-top: 20px;">
                 <a href="#son" style="color: #667eea;">⬆️ Joey's Section</a>
@@ -417,14 +559,13 @@
             </div>
         </div>
     </section>
-  
+
     <section id="signup" class="section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); min-height: 80vh;">
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 600px;">
             <h2 style="color: #f5576c; margin-bottom: 20px;">🎉 Join Our Popcorn Family! 🎉</h2>
             <p style="font-size: 1.1em; margin-bottom: 30px;">Want to be the first to know about next year's popcorn sale? Sign up and we'll keep you posted!</p>
             
             <form name="popcorn-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
-              
                 <input type="hidden" name="form-name" value="popcorn-signup" />
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -458,13 +599,12 @@
             <p style="font-size: 0.9em; color: #666; margin-top: 20px;">We'll only contact you about popcorn sales. No spam, we promise! 🤞</p>
             
             <div class="nav-arrows" style="margin-top: 20px;">
-                <a href="#son" style="color: #f5576c;">⬆️ Joey's Section</a>
+                <a href="#brochure" style="color: #f5576c;">⬆️ Order from Brochure</a>
                 <a href="#contact" style="color: #f5576c;">⬇️ Contact Us</a>
             </div>
         </div>
     </section>
 
-   
     <section id="contact" class="section">
         <div class="contact-content">
             <h2>📧 Contact Us 📧</h2>
@@ -478,5 +618,34 @@
             <a href="#welcome" class="btn btn-gold">⬆️ Back to Top</a>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.product-checkbox');
+            const totalDisplay = document.getElementById('order-total');
+            const hiddenTotal = document.getElementById('hidden-total');
+            const hiddenOrderDetails = document.getElementById('hidden-order-details');
+            
+            function updateTotal() {
+                let total = 0;
+                let selectedItems = [];
+                
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        total += parseFloat(checkbox.dataset.price);
+                        selectedItems.push(checkbox.dataset.name);
+                    }
+                });
+                
+                totalDisplay.textContent = '$' + total.toFixed(2);
+                hiddenTotal.value = '$' + total.toFixed(2);
+                hiddenOrderDetails.value = selectedItems.length > 0 ? selectedItems.join(', ') : 'No items selected';
+            }
+            
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', updateTotal);
+            });
+        });
+    </script>
 </body>
 </html>
