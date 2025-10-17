@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Cub Scout Popcorn Sales!</title>
     <link rel="icon" href="/images/favicon image.png" type="image/x-icon">
-    <meta name="keywords" content="Cub Scouts, Popcorn Sales, Fundraiser, Scout Popcorn, Online Store, Brochure, Fundraising">  
+    <meta name="keywords" content="Cub Scouts, Popcorn Sales, Fundraiser, Scout Activities, Camping, Community Service">
     <meta name="description" content="Support Joey and Eren's Cub Scout popcorn fundraiser! Shop online or browse our brochure for delicious popcorn options.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Support Our Cub Scout Popcorn Sales!">
@@ -265,7 +265,6 @@
     </style>
 </head>
 <body>
-
     <section id="welcome" class="section">
         <div class="welcome-content">
             <h1>🍿 Support Our Cub Scout Popcorn Sale! 🍿</h1>
@@ -322,7 +321,7 @@
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 800px;">
             <h2 style="color: #667eea; margin-bottom: 20px;">📋 Order from Our Brochure 📋</h2>
             <p style="font-size: 1.2em; margin-bottom: 20px;">Don't see what you want in our online store? Our brochure has even more delicious options!</p>
-            <p style="font-size: 1.1em; margin-bottom: 30px; font-weight: bold;">Browse the brochure below, then select your products to place your order!</p>
+            <p style="font-size: 1.1em; margin-bottom: 30px; font-weight: bold;">Browse the brochure, select your products, and we'll show you where to send payment!</p>
 
             <div style="margin: 30px 0; text-align: center;">
                 <h3 style="color: #764ba2; margin-bottom: 20px;">📸 Browse Our Brochure 📸</h3>
@@ -334,19 +333,18 @@
                     <img src="/images/page-3.jpg" alt="Brochure Page 3" style="width: 100%; border-radius: 10px; border: 3px solid #667eea; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
                 </div>
             </div>
- <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
+
+            <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
             <p style="margin-bottom: 20px; color: #666;">Check the items you want to order. The total will calculate automatically!</p>
             
             <form name="brochure-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
-                <!-- Hidden fields for Netlify -->
                 <input type="hidden" name="form-name" value="brochure-order" />
                 <input type="hidden" name="order-total" id="hidden-total" />
                 <input type="hidden" name="order-details" id="hidden-order-details" />
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
-                
-                <!-- Product Selection -->
+
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: left;">
                     <h4 style="color: #667eea; margin-bottom: 15px;">🍿 Select Your Popcorn</h4>
                     
@@ -483,7 +481,8 @@
                             <span style="color: #667eea; font-weight: bold;">$50</span>
                         </label>
                     </div>
-
+                    
+                    <!-- Order Total Display -->
                     <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; text-align: center;">
                         <p style="font-size: 1.1em; margin-bottom: 5px;">Order Total:</p>
                         <p style="font-size: 2em; font-weight: bold; margin: 0;" id="order-total">$0.00</p>
