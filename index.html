@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Our Cub Scout Popcorn Sales!</title>
     <link rel="icon" href="/images/favicon image.png" type="image/x-icon">
-    <meta name="keywords" content="Cub Scouts, Popcorn Sales, Fundraiser, Scout Activities, Camping, Community Service">
+    
+    <!-- Social Media Preview Tags -->
     <meta name="description" content="Support Joey and Eren's Cub Scout popcorn fundraiser! Shop online or browse our brochure for delicious popcorn options.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Support Our Cub Scout Popcorn Sales!">
@@ -38,6 +39,7 @@
             text-align: center;
         }
 
+        /* Welcome Section */
         #welcome {
             background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
             position: relative;
@@ -82,6 +84,7 @@
             margin-bottom: 20px;
         }
 
+        /* Daughter's Section - Girly Theme */
         #daughter {
             background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffeaa7 100%);
             position: relative;
@@ -125,6 +128,7 @@
             color: #ff1493;
         }
 
+        /* Son's Section - Sonic Theme */
         #son {
             background: linear-gradient(135deg, #0066ff 0%, #00ccff 50%, #ffd700 100%);
             position: relative;
@@ -169,6 +173,7 @@
             text-shadow: 2px 2px #ff0000;
         }
 
+        /* Contact Section */
         #contact {
             background: linear-gradient(135deg, #003366 0%, #005599 100%);
             color: white;
@@ -265,6 +270,7 @@
     </style>
 </head>
 <body>
+    <!-- Welcome Section -->
     <section id="welcome" class="section">
         <div class="welcome-content">
             <h1>🍿 Support Our Cub Scout Popcorn Sale! 🍿</h1>
@@ -281,6 +287,7 @@
         </div>
     </section>
 
+    <!-- Daughter's Section -->
     <section id="daughter" class="section">
         <div class="daughter-content">
             <h2>✨ Eren ✨</h2>
@@ -299,6 +306,7 @@
         </div>
     </section>
 
+    <!-- Son's Section -->
     <section id="son" class="section">
         <div class="son-content">
             <h2>⚡ Joey ⚡</h2>
@@ -317,12 +325,14 @@
         </div>
     </section>
 
+    <!-- Brochure Order Section -->
     <section id="brochure" class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 800px;">
             <h2 style="color: #667eea; margin-bottom: 20px;">📋 Order from Our Brochure 📋</h2>
             <p style="font-size: 1.2em; margin-bottom: 20px;">Don't see what you want in our online store? Our brochure has even more delicious options!</p>
             <p style="font-size: 1.1em; margin-bottom: 30px; font-weight: bold;">Browse the brochure, select your products, and we'll show you where to send payment!</p>
-
+            
+            <!-- Brochure Images - Stacked Vertically -->
             <div style="margin: 30px 0; text-align: center;">
                 <h3 style="color: #764ba2; margin-bottom: 20px;">📸 Browse Our Brochure 📸</h3>
                 <p style="margin-bottom: 20px; color: #666;">Scroll through all pages below</p>
@@ -334,17 +344,20 @@
                 </div>
             </div>
 
+            <!-- Order Form with Checkboxes -->
             <h3 style="color: #667eea; margin-bottom: 20px;">📝 Select Your Products</h3>
             <p style="margin-bottom: 20px; color: #666;">Check the items you want to order. The total will calculate automatically!</p>
             
             <form name="brochure-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Hidden fields for Netlify -->
                 <input type="hidden" name="form-name" value="brochure-order" />
                 <input type="hidden" name="order-total" id="hidden-total" />
                 <input type="hidden" name="order-details" id="hidden-order-details" />
                 <p style="display: none;">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
-
+                
+                <!-- Product Selection -->
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: left;">
                     <h4 style="color: #667eea; margin-bottom: 15px;">🍿 Select Your Popcorn</h4>
                     
@@ -483,12 +496,14 @@
                     </div>
                     
                     <!-- Order Total Display -->
-                    <div style="margin-top: 20px; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; text-align: center;">
-                        <p style="font-size: 1.1em; margin-bottom: 5px;">Order Total:</p>
-                        <p style="font-size: 2em; font-weight: bold; margin: 0;" id="order-total">$0.00</p>
+                    <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; text-align: center; border: 3px solid #764ba2;">
+                        <p style="font-size: 1.2em; margin-bottom: 5px; font-weight: bold;">📊 Order Total:</p>
+                        <p style="font-size: 2.5em; font-weight: bold; margin: 0;" id="order-total">$0.00</p>
+                        <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.9;">Check items above to calculate your total</p>
                     </div>
                 </div>
-
+                
+                <!-- Customer Information -->
                 <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">📋 Your Information</h4>
                 
                 <input 
@@ -538,7 +553,8 @@
                     <option value="Check">Check</option>
                     <option value="Other">Other (explain in notes)</option>
                 </select>
-
+                
+                <!-- Payment Info Popup - Shows after payment method selected -->
                 <div id="payment-info" style="display: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; margin-top: 20px; color: white; animation: slideIn 0.3s ease-out;">
                     <h4 style="color: white; margin-bottom: 15px; font-size: 1.5em;">💰 Send Payment Here 💰</h4>
                     <div id="payment-details" style="font-size: 1.1em; line-height: 1.8; font-weight: bold;"></div>
@@ -583,6 +599,7 @@
         </div>
     </section>
 
+    <!-- Email Signup Section -->
     <section id="signup" class="section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); min-height: 80vh;">
         <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); max-width: 600px;">
             <h2 style="color: #f5576c; margin-bottom: 20px;">🎉 Join Our Popcorn Family! 🎉</h2>
@@ -628,6 +645,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="contact-content">
             <h2>📧 Contact Us 📧</h2>
@@ -641,51 +659,57 @@
             <a href="#welcome" class="btn btn-gold">⬆️ Back to Top</a>
         </div>
     </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.querySelectorAll('.product-checkbox');
-            const totalDisplay = document.getElementById('order-total');
-            const hiddenTotal = document.getElementById('hidden-total');
-            const hiddenOrderDetails = document.getElementById('hidden-order-details');
-            
-            function updateTotal() {
-                let total = 0;
-                let selectedItems = [];
-                
-                checkboxes.forEach(function(checkbox) {
-                    if (checkbox.checked) {
-                        total += parseFloat(checkbox.dataset.price);
-                        selectedItems.push(checkbox.dataset.name);
-                    }
-                });
-                
-                totalDisplay.textContent = '
-</body>
-</html> + total.toFixed(2);
-                hiddenTotal.value = '
-</body>
-</html> + total.toFixed(2);
-                hiddenOrderDetails.value = selectedItems.length > 0 ? selectedItems.join(', ') : 'No items selected';
-            }
+<script>
+    window.addEventListener('load', function() {
+        // Auto-calculate order total
+        const checkboxes = document.querySelectorAll('.product-checkbox');
+        const totalDisplay = document.getElementById('order-total');
+        const hiddenTotal = document.getElementById('hidden-total');
+        const hiddenOrderDetails = document.getElementById('hidden-order-details');
+        
+        function updateTotal() {
+            let total = 0;
+            let selectedItems = [];
             
             checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', updateTotal);
+                if (checkbox.checked) {
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    const name = checkbox.getAttribute('data-name');
+                    total += price;
+                    selectedItems.push(name);
+                }
             });
             
-            const paymentMethodSelect = document.getElementById('payment-method');
-            const paymentInfoDiv = document.getElementById('payment-info');
-            const paymentDetailsDiv = document.getElementById('payment-details');
-            
-            const paymentInfo = {
-                'CashApp': '💵 <strong>CashApp:</strong> $DGKuro<br><span style="font-size: 0.9em; font-weight: normal;">(or search by phone: (501) 575-8167)</span>',
-                'Venmo': '💳 <strong>Venmo:</strong> @popcorn-sales',
-                'Chime': '🏦 <strong>Chime:</strong> $Coty-Wood',
-                'Apple Pay': '🍎 <strong>Apple Pay:</strong> (501) 575-8167',
-                'Check': '✉️ <strong>Check:</strong> Mail to Coty Wood<br><span style="font-size: 0.9em; font-weight: normal;">Address will be provided in follow-up contact!</span>',
-                'Other': '📝 <strong>Other:</strong> Please include payment details in the notes section below.'
-            };
-            
+            if (totalDisplay) {
+                totalDisplay.textContent = '$' + total.toFixed(2);
+            }
+            if (hiddenTotal) {
+                hiddenTotal.value = '$' + total.toFixed(2);
+            }
+            if (hiddenOrderDetails) {
+                hiddenOrderDetails.value = selectedItems.length > 0 ? selectedItems.join(', ') : 'No items selected';
+            }
+        }
+        
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', updateTotal);
+        });
+        
+        // Payment method popup
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const paymentInfoDiv = document.getElementById('payment-info');
+        const paymentDetailsDiv = document.getElementById('payment-details');
+        
+        const paymentInfo = {
+            'CashApp': '💵 <strong>CashApp:</strong> $DGKuro<br><span style="font-size: 0.9em; font-weight: normal;">(or search by phone: (501) 575-8167)</span>',
+            'Venmo': '💳 <strong>Venmo:</strong> @popcorn-sales',
+            'Chime': '🏦 <strong>Chime:</strong> $Coty-Wood',
+            'Apple Pay': '🍎 <strong>Apple Pay:</strong> (501) 575-8167',
+            'Check': '✉️ <strong>Check:</strong> Mail to Coty Wood<br><span style="font-size: 0.9em; font-weight: normal;">Address will be provided in follow-up contact!</span>',
+            'Other': '📝 <strong>Other:</strong> Please include payment details in the notes section below.'
+        };
+        
+        if (paymentMethodSelect) {
             paymentMethodSelect.addEventListener('change', function() {
                 const selectedMethod = this.value;
                 
@@ -696,7 +720,8 @@
                     paymentInfoDiv.style.display = 'none';
                 }
             });
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>
